@@ -15,6 +15,13 @@ public class ConversationTreeViewData : TreeViewData
     {
         if (node.Node is RootNode) throw new System.Exception("RootNodes must not be copied!");
 
+        if (node.IsLink)
+        {
+            CreateLink(parent, node);
+            ForceUpdate();
+            return;
+        }
+
         Stack<ConversationTreeViewNode> treeViewNodes = new Stack<ConversationTreeViewNode>();
         Stack<ConversationNode> dialogueNodes   = new Stack<ConversationNode>();
 
@@ -82,9 +89,17 @@ public class ConversationTreeViewData : TreeViewData
             }
 
             parent.RemoveChild(current);
-            nodeParent.RemoveChild(current.Node);
 
-            result = current;
+            if (current.IsLink)
+            {
+                ((ConversationNode) nodeParent).RemoveLink((ConversationNode) current.Node);
+                result = current;
+            }
+            else
+            {
+                nodeParent.RemoveChild(current.Node);
+                result = current;
+            }
 
             ForceUpdate();
         }

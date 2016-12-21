@@ -450,6 +450,7 @@ public class ConversationEditor : EditorWindow
         {
             if (active.ID == treeViewData.Root.ID)                  popupElements &= ~(POPUP_COPY | POPUP_CUT | POPUP_PASTE_LINK);
             if (clipboard != null && clipboard.Parent == null)      popupElements &= ~(POPUP_PASTE_LINK);
+            if (clipboard != null && clipboard.IsLink)              popupElements &= ~(POPUP_PASTE_LINK);
             if (clipboard == null)                                  popupElements &= ~(POPUP_PASTE | POPUP_PASTE_LINK);
             else if ( clipboard.IsNarration &&  active.IsNarration) popupElements &= ~(POPUP_PASTE | POPUP_PASTE_LINK);
             else if (!clipboard.IsNarration && !active.IsNarration) popupElements &= ~(POPUP_PASTE | POPUP_PASTE_LINK);
