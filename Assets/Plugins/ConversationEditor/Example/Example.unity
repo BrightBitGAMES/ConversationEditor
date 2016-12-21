@@ -90,6 +90,47 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &287324902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 287324904}
+  - 114: {fileID: 287324903}
+  m_Layer: 0
+  m_Name: GUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &287324903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 287324902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 659f368424cea0643ba82a1d6b23fe97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  language: 4
+--- !u!4 &287324904
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 287324902}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.046488, y: 1.2616868, z: 29.714249}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
 --- !u!1 &1879183929
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +140,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1879183931}
   - 114: {fileID: 1879183932}
-  - 114: {fileID: 1879183930}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -107,19 +147,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1879183930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1879183929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1c7b58fb06dbd94fb822686b9d15781, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 11400000, guid: 313e7cf1d4b1e504587bebddf8d36feb, type: 2}
-  currentNode: {fileID: 0}
 --- !u!4 &1879183931
 Transform:
   m_ObjectHideFlags: 0
@@ -144,8 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ae0b4e807f8f741b2ea3e100af77d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conversationOwner: {fileID: 1879183930}
-  language: 4
+  conversation: {fileID: 11400000, guid: e73a576e651ab294fbc1aa2404059dfe, type: 2}
 --- !u!1 &2085653240
 GameObject:
   m_ObjectHideFlags: 0

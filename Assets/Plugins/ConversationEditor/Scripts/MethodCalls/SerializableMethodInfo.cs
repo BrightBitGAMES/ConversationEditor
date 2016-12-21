@@ -50,8 +50,6 @@ public sealed class SerializableMethodInfo : ISerializationCallbackReceiver
     {
         if (methodInfo == null) return;
 
-        // Debug.Log("SerializableMethodInfo::OnBeforeSerialize");
-
         target = new SerializableType(methodInfo.DeclaringType);
 
         methodName = methodInfo.Name;
@@ -69,13 +67,11 @@ public sealed class SerializableMethodInfo : ISerializationCallbackReceiver
     {
         if (target == null || string.IsNullOrEmpty(methodName)) return;
 
-        // Debug.Log("SerializableMethodInfo::OnAfterDeserialize");
-
         Type type = target.Type;
 
         if (type == null)
         {
-            Debug.LogWarning("The method '" + methodName + "' can't be deserialized since the owning class type '" + target.Name + "' is missing!");
+            // Debug.LogWarning("The method '" + methodName + "' can't be deserialized since the owning class type '" + target.Name + "' is missing!");
             return;
         }
 

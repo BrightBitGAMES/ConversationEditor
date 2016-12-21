@@ -1,20 +1,20 @@
 ﻿using UnityEngine;
+using BrightBit;
 
 public class CSharpMethods
 {
     // some supported methods:
 
-    public static bool AnInfoOnly(BrightBit.ConversationInfo info)
+    public static bool AnInfoOnly(ConversationNode node)
     {
-        Player p = (Player) info.Initiator;
-        //NPC npc  = (NPC) info.Owner;
+        Player p = (Player) Object.FindObjectOfType(typeof(Player));
 
         return p.Intelligence > 5;
     }
 
-    public static bool IsPlayerIntelligenceHigherThan(BrightBit.ConversationInfo info, int intelligence)
+    public static bool IsPlayerIntelligenceHigherThan(ConversationNode node, int intelligence)
     {
-        Player p = (Player) info.Initiator;
+        Player p = (Player) Object.FindObjectOfType(typeof(Player));
 
         return p.Intelligence > intelligence;
     }
@@ -44,9 +44,11 @@ public class CSharpMethods
         Debug.Log(message);
     }
 
-    public static void LogMessage(BrightBit.ConversationInfo info, string message)
+    public static void LogMessage(ConversationNode node, string message)
     {
-        Debug.Log(message + " : " + info.Initiator + " : " + info.Owner);
+        Player player = (Player) Object.FindObjectOfType(typeof(Player));
+
+        Debug.Log(message + " : " + player + " : " + Conversation.CurrentOwner);
     }
 
     // some unsupported methods:

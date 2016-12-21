@@ -14,22 +14,22 @@ namespace BrightBit
 // bool (string)
 // bool (string, int)
 
-// bool (ConversationInfo)
-// bool (ConversationInfo, int)
-// bool (ConversationInfo, float)
-// bool (ConversationInfo, bool)
-// bool (ConversationInfo, string)
-// bool (ConversationInfo, string, int)
+// bool (ConversationNode)
+// bool (ConversationNode, int)
+// bool (ConversationNode, float)
+// bool (ConversationNode, bool)
+// bool (ConversationNode, string)
+// bool (ConversationNode, string, int)
 
 [Serializable]
 public class NodeCondition : NodeEvent
 {
-    public bool Check(ConversationInfo info)
+    public bool Check(ConversationNode node)
     {
         if (script == null) return true;
         if (method == null) return true;
 
-        return (bool) method.Invoke(null, CreateParameterArray(info));
+        return (bool) method.Invoke(null, CreateParameterArray(node));
     }
 }
 

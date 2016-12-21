@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using UnityEngine.Events;
 
-public class Player : MonoBehaviour, BrightBit.IConversationalPartner
+public class Player : MonoBehaviour
 {
     [SerializeField, Range(1, 10)] int strength     = 5;
     [SerializeField, Range(1, 10)] int perception   = 5;

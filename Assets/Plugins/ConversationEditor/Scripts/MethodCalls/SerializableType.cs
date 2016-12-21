@@ -32,20 +32,14 @@ public sealed class SerializableType : ISerializationCallbackReceiver
 
     void ISerializationCallbackReceiver.OnBeforeSerialize()
     {
-        //Debug.Log("SerializableType::OnBeforeSerialize");
-
         if (string.IsNullOrEmpty(assemblyQualifiedName))
         {
-            //this.assemblyQualifiedName = type != null ? type.AssemblyQualifiedName : string.Empty;
             this.assemblyQualifiedName = type != null ? type.FullName + ", " + type.Assembly.GetName().Name : string.Empty;
-            //this.assemblyQualifiedName = type != null ? type.FullName : string.Empty;
         }
     }
 
     void ISerializationCallbackReceiver.OnAfterDeserialize()
     {
-        //Debug.Log("SerializableType::OnAfterDeserialize");
-
         if (string.IsNullOrEmpty(assemblyQualifiedName))
         {
             type = null;
@@ -54,7 +48,7 @@ public sealed class SerializableType : ISerializationCallbackReceiver
         {
             type = System.Type.GetType(assemblyQualifiedName);
 
-            if (type == null) Debug.LogWarning("'" + assemblyQualifiedName + "' was referenced but the class type wasn't found!");
+            // if (type == null) Debug.LogWarning("'" + assemblyQualifiedName + "' was referenced but the class type wasn't found!");
         }
     }
 

@@ -133,8 +133,8 @@ public class ConversationTreeViewNode : TreeViewNode
     {
         this.node = node;
 
-        if (node is Narration)   icon = AssetDatabase.LoadAssetAtPath("Assets/Images/NPC.png", typeof(Texture2D)) as Texture2D;
-        else if (node is Option) icon = AssetDatabase.LoadAssetAtPath("Assets/Images/Player.png", typeof(Texture2D)) as Texture2D;
+        if (node is Narration)   icon = AssetDatabase.LoadAssetAtPath("Assets/Plugins/ConversationEditor/Images/Narration.png", typeof(Texture2D)) as Texture2D;
+        else if (node is Option) icon = AssetDatabase.LoadAssetAtPath("Assets/Plugins/ConversationEditor/Images/Option.png", typeof(Texture2D)) as Texture2D;
 
         if (!isLink) node.EditorData = this;
     }

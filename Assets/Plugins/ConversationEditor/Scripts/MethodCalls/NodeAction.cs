@@ -14,22 +14,22 @@ namespace BrightBit
 // void (string)
 // void (string, int)
 
-// void (ConversationInfo)
-// void (ConversationInfo, int)
-// void (ConversationInfo, float)
-// void (ConversationInfo, bool)
-// void (ConversationInfo, string)
-// void (ConversationInfo, string, int)
+// void (ConversationNode)
+// void (ConversationNode, int)
+// void (ConversationNode, float)
+// void (ConversationNode, bool)
+// void (ConversationNode, string)
+// void (ConversationNode, string, int)
 
 [Serializable]
 public class NodeAction : NodeEvent
 {
-    public void Call(ConversationInfo info)
+    public void Call(ConversationNode node)
     {
         if (script == null) return;
         if (method == null) return;
 
-        method.Invoke(null, CreateParameterArray(info));
+        method.Invoke(null, CreateParameterArray(node));
     }
 }
 

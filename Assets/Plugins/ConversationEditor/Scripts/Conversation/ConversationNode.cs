@@ -28,16 +28,17 @@ public abstract class ConversationNode : Node
         set { comments = value; }
     }
 
-    // internal use only
-    public bool RunShowCondition(ConversationInfo info)
+    public NodeCondition ShowCondition { get { return showCondition; } }
+    public NodeAction    ShowAction    { get { return showAction;    } }
+
+    public bool InvokeCondition()
     {
-        return showCondition.Check(info);
+        return showCondition.Check(this);
     }
 
-    // internal use only
-    public void RunSomeAction(ConversationInfo info)
+    public void InvokeAction()
     {
-        showAction.Call(info);
+        showAction.Call(this);
     }
 
     public List<ConversationNode> LinkParents { get { return linkParents; } }
@@ -135,14 +136,20 @@ public abstract class ConversationNode : Node
         return connections[i].IsLink;
     }
 
-    public void SetText(Conversation.Language language, string text)
+    public string Text
     {
-        texts[(int) language] = text;
+        get { return GetText(Conversation.CurrentLanguage); }
+        set { SetText(Conversation.CurrentLanguage, value); }
     }
 
     public string GetText(Conversation.Language language)
     {
         return texts[(int) language];
+    }
+
+    public void SetText(Conversation.Language language, string text)
+    {
+        texts[(int) language] = text;
     }
 }
 

@@ -14,12 +14,12 @@ public class NodeEventDrawer : PropertyDrawer
     // the signatures don't contain return types
     static readonly Type[][] SupportedMethodSignatures = new Type[][]
     {
-        new Type[] { typeof(ConversationInfo) },
-        new Type[] { typeof(ConversationInfo), typeof(int) },
-        new Type[] { typeof(ConversationInfo), typeof(float) },
-        new Type[] { typeof(ConversationInfo), typeof(bool) },
-        new Type[] { typeof(ConversationInfo), typeof(string) },
-        new Type[] { typeof(ConversationInfo), typeof(string), typeof(int) },
+        new Type[] { typeof(ConversationNode) },
+        new Type[] { typeof(ConversationNode), typeof(int) },
+        new Type[] { typeof(ConversationNode), typeof(float) },
+        new Type[] { typeof(ConversationNode), typeof(bool) },
+        new Type[] { typeof(ConversationNode), typeof(string) },
+        new Type[] { typeof(ConversationNode), typeof(string), typeof(int) },
 
         new Type[] { typeof(int) },
         new Type[] { typeof(float) },
@@ -143,7 +143,7 @@ public class NodeEventDrawer : PropertyDrawer
     {
         Type type = paramInfo.ParameterType;
 
-        if (type == typeof(ConversationInfo)) return argRect;
+        if (type == typeof(ConversationNode)) return argRect;
 
         string name = paramInfo.Name.ToSeparatedPascalCase();
 
@@ -225,7 +225,7 @@ public class NodeEventDrawer : PropertyDrawer
 
         foreach (ParameterInfo param in @params)
         {
-            if (param.ParameterType == typeof(ConversationInfo)) return true;
+            if (param.ParameterType == typeof(ConversationNode)) return true;
         }
 
         return false;

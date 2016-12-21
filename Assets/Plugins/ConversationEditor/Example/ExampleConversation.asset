@@ -1,0 +1,519 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a712efed7a6fd874ba0ee9e271a01e80, type: 3}
+  m_Name: ExampleConversation
+  m_EditorClassIdentifier: 
+  root: {fileID: 114000013510739840}
+  comment: 
+--- !u!114 &114000010066302198
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ab1e9a2ddfca414db37b0851be2ee58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 11400000}
+  connections:
+  - target: {fileID: 114000011634363738}
+    isLink: 0
+  parent: {fileID: 114000011878357188}
+  linkParents: []
+  showCondition:
+    script: {fileID: 0}
+    argument:
+      mode: 0
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+    methodInfo:
+      target:
+        assemblyQualifiedName: 
+      methodName: 
+      bindingFlags: 0
+      parameters: []
+      returnType:
+        assemblyQualifiedName: 
+  showAction:
+    script: {fileID: 0}
+    argument:
+      mode: 0
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+    methodInfo:
+      target:
+        assemblyQualifiedName: 
+      methodName: 
+      bindingFlags: 0
+      parameters: []
+      returnType:
+        assemblyQualifiedName: 
+  audioClip: {fileID: 0}
+  audioClips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  texts:
+  - Second option with even more awesome consequences.
+  - 
+  - 
+  - 
+  - Zweite Option mit noch viel erstaunlicheren Konsequenzen.
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  comments: 
+--- !u!114 &114000011242950678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1fc0ee0d0f9e4d47b3488a5120e594c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 11400000}
+  connections: []
+  parent: {fileID: 114000011394080052}
+  linkParents: []
+  showCondition:
+    script: {fileID: 0}
+    argument:
+      mode: 0
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+    methodInfo:
+      target:
+        assemblyQualifiedName: 
+      methodName: 
+      bindingFlags: 0
+      parameters: []
+      returnType:
+        assemblyQualifiedName: 
+  showAction:
+    script: {fileID: 11500000, guid: 9e8a0854e67ebc8409ec9f200b24ab6b, type: 3}
+    argument:
+      mode: 0
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: Some narration was shown.
+    methodInfo:
+      target:
+        assemblyQualifiedName: CSharpMethods, Assembly-CSharp-firstpass
+      methodName: LogMessage
+      bindingFlags: 24
+      parameters:
+      - assemblyQualifiedName: System.String, mscorlib
+      returnType:
+        assemblyQualifiedName: 
+  audioClip: {fileID: 0}
+  audioClips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  texts:
+  - Narration without options!
+  - 
+  - 
+  - 
+  - "Ein Erz\xE4hltext ohne Optionen!"
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  comments: 
+  tag: 
+--- !u!114 &114000011394080052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ab1e9a2ddfca414db37b0851be2ee58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 11400000}
+  connections:
+  - target: {fileID: 114000011242950678}
+    isLink: 0
+  parent: {fileID: 114000011878357188}
+  linkParents: []
+  showCondition:
+    script: {fileID: 0}
+    argument:
+      mode: 0
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+    methodInfo:
+      target:
+        assemblyQualifiedName: 
+      methodName: 
+      bindingFlags: 0
+      parameters: []
+      returnType:
+        assemblyQualifiedName: 
+  showAction:
+    script: {fileID: 0}
+    argument:
+      mode: 0
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+    methodInfo:
+      target:
+        assemblyQualifiedName: 
+      methodName: 
+      bindingFlags: 0
+      parameters: []
+      returnType:
+        assemblyQualifiedName: 
+  audioClip: {fileID: 0}
+  audioClips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  texts:
+  - First option with some awesome consequences.
+  - 
+  - 
+  - 
+  - Erste Option mit erstaunlichen Konsequenzen.
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  comments: 
+--- !u!114 &114000011634363738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1fc0ee0d0f9e4d47b3488a5120e594c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 11400000}
+  connections:
+  - target: {fileID: 114000014213114140}
+    isLink: 0
+  parent: {fileID: 114000010066302198}
+  linkParents: []
+  showCondition:
+    script: {fileID: 0}
+    argument:
+      mode: 0
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+    methodInfo:
+      target:
+        assemblyQualifiedName: 
+      methodName: 
+      bindingFlags: 0
+      parameters: []
+      returnType:
+        assemblyQualifiedName: 
+  showAction:
+    script: {fileID: 0}
+    argument:
+      mode: 0
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+    methodInfo:
+      target:
+        assemblyQualifiedName: 
+      methodName: 
+      bindingFlags: 0
+      parameters: []
+      returnType:
+        assemblyQualifiedName: 
+  audioClip: {fileID: 0}
+  audioClips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  texts:
+  - Another narration...
+  - 
+  - 
+  - 
+  - "Ein weiterer Erz\xE4hltext..."
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  comments: 
+  tag: 
+--- !u!114 &114000011878357188
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1fc0ee0d0f9e4d47b3488a5120e594c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 11400000}
+  connections:
+  - target: {fileID: 114000011394080052}
+    isLink: 0
+  - target: {fileID: 114000010066302198}
+    isLink: 0
+  parent: {fileID: 114000013510739840}
+  linkParents: []
+  showCondition:
+    script: {fileID: 0}
+    argument:
+      mode: 0
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+    methodInfo:
+      target:
+        assemblyQualifiedName: 
+      methodName: 
+      bindingFlags: 0
+      parameters: []
+      returnType:
+        assemblyQualifiedName: 
+  showAction:
+    script: {fileID: 0}
+    argument:
+      mode: 0
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+    methodInfo:
+      target:
+        assemblyQualifiedName: 
+      methodName: 
+      bindingFlags: 0
+      parameters: []
+      returnType:
+        assemblyQualifiedName: 
+  audioClip: {fileID: 0}
+  audioClips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  texts:
+  - Imagine some interesting narration here.
+  - 
+  - 
+  - 
+  - Stellen Sie sich hier einen interessanten Text vor.
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  comments: 
+  tag: 
+--- !u!114 &114000013510739840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d77baa9dad4e4469f06f43e9c82828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 11400000}
+  connections:
+  - target: {fileID: 114000011878357188}
+    isLink: 0
+  parent: {fileID: 0}
+--- !u!114 &114000014213114140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ab1e9a2ddfca414db37b0851be2ee58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 11400000}
+  connections: []
+  parent: {fileID: 114000011634363738}
+  linkParents: []
+  showCondition:
+    script: {fileID: 0}
+    argument:
+      mode: 0
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+    methodInfo:
+      target:
+        assemblyQualifiedName: 
+      methodName: 
+      bindingFlags: 0
+      parameters: []
+      returnType:
+        assemblyQualifiedName: 
+  showAction:
+    script: {fileID: 0}
+    argument:
+      mode: 0
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+    methodInfo:
+      target:
+        assemblyQualifiedName: 
+      methodName: 
+      bindingFlags: 0
+      parameters: []
+      returnType:
+        assemblyQualifiedName: 
+  audioClip: {fileID: 0}
+  audioClips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  texts:
+  - There will be no more narration after this option!
+  - 
+  - 
+  - 
+  - "Nach dieser Option wird kein weiterer Erz\xE4hltext erscheinen!"
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  comments: 

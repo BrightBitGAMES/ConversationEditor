@@ -24,7 +24,7 @@ public class NodeEvent
 
     protected MethodInfo method { get { return methodInfo; } }
 
-    protected object[] CreateParameterArray(ConversationInfo info)
+    protected object[] CreateParameterArray(ConversationNode info)
     {
         ParameterInfo[] parameters = method.GetParameters();
 
@@ -36,7 +36,7 @@ public class NodeEvent
         {
             Type first = parameters[0].ParameterType;
 
-            if (first == typeof(ConversationInfo)) return new object[] { info };
+            if (first == typeof(ConversationNode)) return new object[] { info };
 
             return new object[] { argument.GetValueByType(first) };
         }
@@ -45,7 +45,7 @@ public class NodeEvent
             Type first  = parameters[0].ParameterType;
             Type second = parameters[1].ParameterType;
 
-            if (first == typeof(ConversationInfo))                     return new object[] { info, argument.GetValueByType(second) };
+            if (first == typeof(ConversationNode))                     return new object[] { info, argument.GetValueByType(second) };
             else if (first == typeof(string) && second == typeof(int)) return new object[] { argument.String, argument.Int };
             else
                 throw new System.InvalidOperationException("Invalid types for two parameter arrangement : " + first + " : " + second);
@@ -56,7 +56,7 @@ public class NodeEvent
             Type second = parameters[1].ParameterType;
             Type third  = parameters[2].ParameterType;
 
-            if (first == typeof(ConversationInfo) && second == typeof(string) && third == typeof(int)) return new object[] { info, argument.String, argument.Int };
+            if (first == typeof(ConversationNode) && second == typeof(string) && third == typeof(int)) return new object[] { info, argument.String, argument.Int };
             else
                 throw new System.InvalidOperationException("Invalid types for three parameter arrangement : " + first + " : " + second + " : " + third);
         }
