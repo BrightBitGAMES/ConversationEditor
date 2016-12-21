@@ -4,7 +4,7 @@ namespace BrightBit
 {
 
 [System.Serializable]
-public class RootNode : Node
+public sealed class RootNode : Node
 {
     public static RootNode Create(Conversation owner)
     {

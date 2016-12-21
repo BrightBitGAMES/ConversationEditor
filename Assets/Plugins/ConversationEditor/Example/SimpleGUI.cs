@@ -22,7 +22,7 @@ public class SimpleGUI : MonoBehaviour
     }
 
     void OnGUI()
-    {        
+    {
         GUIStyle style = new GUIStyle(GUI.skin.label);
         style.alignment = TextAnchor.MiddleCenter;
 

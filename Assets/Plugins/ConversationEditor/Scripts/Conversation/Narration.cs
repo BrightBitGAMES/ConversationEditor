@@ -5,7 +5,7 @@ namespace BrightBit
 {
 
 [System.Serializable]
-public class Narration : ConversationNode
+public sealed class Narration : ConversationNode
 {
     [SerializeField, HideInInspector] string tag;
 

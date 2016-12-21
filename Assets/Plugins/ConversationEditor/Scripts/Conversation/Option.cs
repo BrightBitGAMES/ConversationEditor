@@ -4,7 +4,7 @@ namespace BrightBit
 {
 
 [System.Serializable]
-public class Option : ConversationNode
+public sealed class Option : ConversationNode
 {
     public static Option Create(Conversation owner)
     {

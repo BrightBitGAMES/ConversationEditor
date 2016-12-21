@@ -254,7 +254,6 @@ public class ConversationEditor : EditorWindow
         }
 
         if (Event.current.type == EventType.ValidateCommand && Event.current.commandName == "UndoRedoPerformed") Repaint();
-        else if (Event.current.type == EventType.ValidateCommand) Debug.Log(Event.current.commandName);
 
         EditorGUILayout.BeginVertical(GUI.skin.box);
 
