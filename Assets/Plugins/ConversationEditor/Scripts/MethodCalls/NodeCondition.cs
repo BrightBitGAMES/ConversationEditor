@@ -26,8 +26,10 @@ public class NodeCondition : NodeEvent
 {
     public bool Check(ConversationNode node)
     {
-        if (script == null) return true;
-        if (method == null) return true;
+#if UNITY_EDITOR
+            if (script == null) return true;
+#endif
+            if (method == null) return true;
 
         return (bool) method.Invoke(null, CreateParameterArray(node));
     }

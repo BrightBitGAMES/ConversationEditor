@@ -97,9 +97,10 @@ public sealed class Conversation : ScriptableObject
     {
         get
         {
-            if (root == null && AssetDatabase.Contains(this)) root = RootNode.Create(this);
-
-            return root;
+#if UNITY_EDITOR
+                if (root == null && AssetDatabase.Contains(this)) root = RootNode.Create(this);
+#endif
+                return root;
         }
     }
 

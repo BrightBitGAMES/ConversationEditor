@@ -26,8 +26,10 @@ public class NodeAction : NodeEvent
 {
     public void Call(ConversationNode node)
     {
-        if (script == null) return;
-        if (method == null) return;
+#if UNITY_EDITOR
+            if (script == null) return;
+#endif
+            if (method == null) return;
 
         method.Invoke(null, CreateParameterArray(node));
     }

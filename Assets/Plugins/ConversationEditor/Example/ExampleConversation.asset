@@ -108,7 +108,9 @@ MonoBehaviour:
   owner: {fileID: 11400000}
   connections: []
   parent: {fileID: 114000011394080052}
-  linkParents: []
+  linkParents:
+  - {fileID: 114975377749909100}
+  - {fileID: 114676731370159358}
   showCondition:
     script: {fileID: 0}
     argument:
@@ -196,7 +198,7 @@ MonoBehaviour:
     script: {fileID: 0}
     argument:
       mode: 0
-      intValue: 0
+      intValue: 5
       boolValue: 0
       floatValue: 0
       stringValue: 
@@ -351,6 +353,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: {fileID: 11400000}
   connections:
+  - target: {fileID: 114975377749909100}
+    isLink: 0
+  - target: {fileID: 114676731370159358}
+    isLink: 0
   - target: {fileID: 114000011394080052}
     isLink: 0
   - target: {fileID: 114000010066302198}
@@ -507,6 +513,172 @@ MonoBehaviour:
   - 
   - 
   - "Nach dieser Option wird kein weiterer Erz\xE4hltext erscheinen!"
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  comments: 
+--- !u!114 &114676731370159358
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ab1e9a2ddfca414db37b0851be2ee58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 11400000}
+  connections:
+  - target: {fileID: 114000011242950678}
+    isLink: 1
+  parent: {fileID: 114000011878357188}
+  linkParents: []
+  showCondition:
+    script: {fileID: 11500000, guid: 9e8a0854e67ebc8409ec9f200b24ab6b, type: 3}
+    argument:
+      mode: 0
+      intValue: 5
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+    methodInfo:
+      target:
+        assemblyQualifiedName: CSharpMethods, Assembly-CSharp-firstpass
+      methodName: IsPlayerIntelligenceSmallerThan
+      bindingFlags: 24
+      parameters:
+      - assemblyQualifiedName: BrightBit.ConversationNode, Assembly-CSharp-firstpass
+      - assemblyQualifiedName: System.Int32, mscorlib
+      returnType:
+        assemblyQualifiedName: 
+  showAction:
+    script: {fileID: 0}
+    argument:
+      mode: 0
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+    methodInfo:
+      target:
+        assemblyQualifiedName: 
+      methodName: 
+      bindingFlags: 0
+      parameters: []
+      returnType:
+        assemblyQualifiedName: 
+  audioClip: {fileID: 0}
+  audioClips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  texts:
+  - This Option is only visible because the Player Intelligence is below 5!
+  - 
+  - 
+  - 
+  - Spielerintelligenz ist niedriger als 5
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  comments: 
+--- !u!114 &114975377749909100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ab1e9a2ddfca414db37b0851be2ee58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 11400000}
+  connections:
+  - target: {fileID: 114000011242950678}
+    isLink: 1
+  parent: {fileID: 114000011878357188}
+  linkParents: []
+  showCondition:
+    script: {fileID: 11500000, guid: 9e8a0854e67ebc8409ec9f200b24ab6b, type: 3}
+    argument:
+      mode: 0
+      intValue: 5
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+    methodInfo:
+      target:
+        assemblyQualifiedName: CSharpMethods, Assembly-CSharp-firstpass
+      methodName: IsPlayerIntelligenceHigherThan
+      bindingFlags: 24
+      parameters:
+      - assemblyQualifiedName: BrightBit.ConversationNode, Assembly-CSharp-firstpass
+      - assemblyQualifiedName: System.Int32, mscorlib
+      returnType:
+        assemblyQualifiedName: 
+  showAction:
+    script: {fileID: 0}
+    argument:
+      mode: 0
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+    methodInfo:
+      target:
+        assemblyQualifiedName: 
+      methodName: 
+      bindingFlags: 0
+      parameters: []
+      returnType:
+        assemblyQualifiedName: 
+  audioClip: {fileID: 0}
+  audioClips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  texts:
+  - This Option is only visible because the Player Intelligence is above 5!
+  - 
+  - 
+  - 
+  - "Spielerintelligenz ist h\xF6her als 5"
   - 
   - 
   - 

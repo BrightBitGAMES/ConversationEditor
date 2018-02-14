@@ -1,11 +1,17 @@
 using UnityEngine;
+
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
+
 using System;
 using System.Linq;
 using System.Reflection;
 
 namespace BrightBit
 {
+
+#if UNITY_EDITOR
 
 public static class SerializedPropertyExtensions
 {
@@ -74,5 +80,7 @@ public static class SerializedPropertyExtensions
         return default(T);
     }
 }
+
+#endif
 
 } // of namespace BrightBit

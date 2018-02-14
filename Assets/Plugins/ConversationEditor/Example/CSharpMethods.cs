@@ -19,6 +19,13 @@ public class CSharpMethods
         return p.Intelligence > intelligence;
     }
 
+    public static bool IsPlayerIntelligenceSmallerThan(ConversationNode node, int intelligence)
+    {
+        Player p = (Player)Object.FindObjectOfType(typeof(Player));
+
+        return p.Intelligence < intelligence;
+    }
+
     public static bool IsNodeVisible(bool visibility)
     {
         return visibility;
